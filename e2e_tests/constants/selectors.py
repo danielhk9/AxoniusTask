@@ -25,5 +25,6 @@ TRANSLATION_MODAL_TITLE_XPATH = '//h1[text()="Translation on"]'
 CLEANING_FEE = "pd-value-CLEANING_FEE"
 AIRBNB_GUEST_FEE = "pd-value-AIRBNB_GUEST_FEE"
 TOTAL = "pd-value-TOTAL"
+PRICE_TOTAL = "price-item-total"
 ACCOMMODATION = "pd-value-ACCOMMODATION"
 PHONE_NUMBER_EL = "login-signup-phonenumber"

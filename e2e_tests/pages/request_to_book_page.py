@@ -1,4 +1,5 @@
-from e2e_tests.constants.selectors import TOTAL, ACCOMMODATION, CLEANING_FEE, AIRBNB_GUEST_FEE, PHONE_NUMBER_EL
+from e2e_tests.constants.selectors import TOTAL, ACCOMMODATION, CLEANING_FEE, AIRBNB_GUEST_FEE, PHONE_NUMBER_EL, \
+    PRICE_TOTAL
 from e2e_tests.pages.base_page import wait_for_element_with_data_test_id
 
 def _get_phone_number_field(page):
@@ -14,7 +15,11 @@ def set_phone_number(page, phone_number, logger):
 
 
 def get_final_total_text(page):
-    return wait_for_element_with_data_test_id(page, TOTAL).text_content()
+    for fee_type in [TOTAL, PRICE_TOTAL]:
+        el = wait_for_element_with_data_test_id(page, fee_type)
+        if el:
+            return el.text_content()
+    return "There is no FEE tax"
 
 def get_final_accommodation_text(page):
     return wait_for_element_with_data_test_id(page, ACCOMMODATION).text_content()
