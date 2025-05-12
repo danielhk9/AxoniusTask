@@ -20,3 +20,10 @@ CONTINUE_BUTTON_XPATH = '//button[text()="Continue"]'
 
 # Popups / Modals
 TRANSLATION_MODAL_TITLE_XPATH = '//h1[text()="Translation on"]'
+
+# Values
+CLEANING_FEE = "pd-value-CLEANING_FEE"
+AIRBNB_GUEST_FEE = "pd-value-AIRBNB_GUEST_FEE"
+TOTAL = "pd-value-TOTAL"
+ACCOMMODATION = "pd-value-ACCOMMODATION"
+PHONE_NUMBER_EL = "login-signup-phonenumber"
