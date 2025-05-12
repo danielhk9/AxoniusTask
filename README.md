@@ -54,9 +54,6 @@ docker build -t axonius-tests .
 docker run --rm axonius-tests --suite-timeout=900 --log-level=DEBUG
 ```
 
-You can pass any `pytest` options after the image name.
-
----
 
 ### 4. Use the Makefile (Optional)
 
@@ -87,16 +84,3 @@ make repeat- will execute 10 times
 └── README.md
 ```
 
----
-
-## 💡 Example command
-
-```bash
-./run_tests.sh --suite-timeout=600 --log-level=DEBUG -k "search"
-```
-
----
-
-## 📄 License
-
-MIT — do what you want, just don’t blame us if it breaks 🙂
