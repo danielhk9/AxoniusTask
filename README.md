@@ -19,8 +19,8 @@ This project includes end-to-end tests using **Playwright** and **Pytest**, wrap
 ### 1. Clone the project
 
 ```bash
-git clone https://github.com/your-org/axonius-automation.git
-cd axonius-automation
+git clone https://github.com/danielhk9/AxoniusTask.git
+cd AxoniusTask
 ```
 
 ---
@@ -36,6 +36,9 @@ pytest e2e_tests/tests --suite-timeout=900
 ```
 
 ---
+## 🧩 Plugin: --suite-timeout
+
+The `--suite-timeout` flag lets you define a max number of seconds for the full test suite. If it runs longer than that, the rest of the tests will fail.
 
 ### 3. Run with Docker
 
@@ -62,22 +65,7 @@ You can pass any `pytest` options after the image name.
 ```bash
 make build
 make test
-```
-
-#### Run with custom args:
-
-```bash
-make run ARGS="--suite-timeout=600 -k reservation"
-```
-
----
-
-## 🧩 Plugin: --suite-timeout
-
-The `--suite-timeout` flag lets you define a max number of seconds for the full test suite. If it runs longer than that, the rest of the tests will fail.
-
-```bash
-pytest e2e_tests/tests --suite-timeout=900
+make repeat- will execute 10 times 
 ```
 
 ---
