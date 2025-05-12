@@ -72,14 +72,17 @@ make repeat- will execute 10 times
 ```
 .
 ├── e2e_tests/
-│   ├── tests/                # Actual tests
-│   ├── pages/                # Page-related helper functions
+│   ├── tests/                # Test cases
+│   ├── pages/                # Page helper functions (like set_date, click_button)
 │   ├── constants/            # Selectors and test data
-│   └── conftest.py
-├── pytest_suite_timeout/     # Custom plugin (suite timeout)
-├── run_tests.sh              # Test runner script
-├── Dockerfile
-├── Makefile
+│   ├── config.py             # Config data
+│   └── conftest.py           # Shared fixtures
+├── pytest_suite_timeout/     # Custom Pytest plugin
+│   └── __init__.py
+├── setup.py                  # Makes the plugin installable via pip
+├── run_tests.sh              # Bash script to run tests with arguments
+├── Dockerfile                # Docker config for running tests in a container
+├── Makefile                  # Developer-friendly shortcuts for build/run
 ├── requirements.txt
 └── README.md
 ```
