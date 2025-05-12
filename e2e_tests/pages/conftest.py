@@ -1,8 +1,8 @@
-from e2e_tests.pages.item_page import click_on_reserve, click_on_continue_button, close_translate_window
+from e2e_tests.pages.item_page import click_on_reserve, close_translate_window_if_exists
 from e2e_tests.pages.landing_page import click_on_guests_button, click_on_increase, type_inside_location_field, \
     click_on_check_in_button, select_specific_date
-from e2e_tests.pages.login_signup_page import set_phone_number
-from e2e_tests.test_data import PHONE_NUMBER
+from e2e_tests.pages.request_to_book_page import set_phone_number
+from e2e_tests.constants.test_data import PHONE_NUMBER
 
 
 def _set_number_of_guests(page, number, element):
@@ -27,13 +27,8 @@ def navigate_to_offer(page, offer):
     raw_url = url_element.get_attribute('content')
     full_url = f"https://{raw_url}"
     page.goto(full_url, wait_until="load")
-    close_translate_window(page)
+    close_translate_window_if_exists(page)
 
-
-def reserve_offer(page, offer):
+def reserve_offer(page, logger):
     click_on_reserve(page)
-    set_phone_number(page, PHONE_NUMBER)
-
-def sign_up_to_website(page):
-    click_on_continue_button(page)
-
+    set_phone_number(page, PHONE_NUMBER, logger)

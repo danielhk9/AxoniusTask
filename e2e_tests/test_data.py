@@ -1,6 +1,0 @@
-# e2e_test_data.py
-
-LOCATION = "Tel Aviv"
-NUMBER_OF_ADULTS = 2
-NUMBER_OF_CHILDREN = 1
-PHONE_NUMBER = '050123123'
