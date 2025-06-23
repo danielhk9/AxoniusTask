@@ -1,8 +1,10 @@
+IMAGE_NAME=airbnb-e2e
+
 build:
-	docker build -t axonius-tests .
+	docker build -t $(IMAGE_NAME) .
 
 run:
-	docker run --rm axonius-tests
+	docker run --rm -v $(PWD)/temp:/app/temp $(IMAGE_NAME)
 
 repeat:
-	docker run --rm axonius-tests --count=10
+	docker run --rm $(IMAGE_NAME) --count=10
