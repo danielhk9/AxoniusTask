@@ -23,6 +23,7 @@ Can be run locally or inside Docker.
 ```bash
 git clone https://github.com/danielhk9/AxoniusTask.git
 cd AxoniusTask
+pip install -e .
 pytest e2e_tests/tests --suite-timeout=600
 ```
 
