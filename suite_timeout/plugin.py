@@ -6,7 +6,7 @@ class SuiteTimeoutPlugin:
         self.timeout = timeout
 
     def _timeout_handler(self, signum, frame):
-        pytest.fail(f"\n\u26d4\ufe0f Test suite exceeded timeout of {self.timeout} seconds", pytrace=False)
+        pytest.exit(f"\nTest suite exceeded timeout of {self.timeout} seconds.\n")
 
     def start_timer(self):
         if self.timeout:
